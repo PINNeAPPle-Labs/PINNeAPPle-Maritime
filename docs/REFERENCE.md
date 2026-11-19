@@ -17,7 +17,9 @@
 7. [Industry Standards & Validation Context](#7-industry-standards--validation-context)
 8. [Open Challenges & Gaps](#8-open-challenges--gaps)
 9. [Roadmap: Building the Reference Hub](#9-roadmap-building-the-reference-hub)
-10. [Sources](#10-sources)
+10. [Where this reference meets the PINNeAPPle codebase](#10-where-this-reference-meets-the-pinneapple-codebase)
+11. [Contributing](#11-contributing)
+12. [Sources](#12-sources)
 
 ---
 
@@ -249,7 +251,44 @@ A phased plan for this repository to become a genuinely authoritative, actively-
 
 ---
 
-## 10. Sources
+## 10. Where this reference meets the PINNeAPPle codebase
+
+*Added November 2026.* Everything above describes the field. This section is the other half: the places inside the PINNeAPPle organisation where each topic has something runnable, so a claim here can be checked against a case rather than taken on trust. Links are to live issues and finished experiments, not aspirations.
+
+### Use cases and open work in [`PINNeAPPle`](https://github.com/PINNeAPPle-Labs/PINNeAPPle)
+
+| Topic from this document | Where it lives |
+|---|---|
+| Section 4 — hydrostatics, resistance and pressure hulls | [#1203](https://github.com/PINNeAPPle-Labs/PINNeAPPle/issues/1203) standard workflow for submarines and underwater vehicles: hydrostatics, ITTC-57 resistance, pressure hull, depth control |
+| Section 4 — marine control loops | [#1053](https://github.com/PINNeAPPle-Labs/PINNeAPPle/issues/1053) control cases 4/6: marine |
+| Section 5 — open hull geometry | [#668](https://github.com/PINNeAPPle-Labs/PINNeAPPle/issues/668) geometry library fidelity where `info()` flags estimates, including the KCS container-ship offsets |
+
+### Benchmarks
+
+There is no maritime experiment in `PINNeAPPle-Benchmark` yet, and this document does not pretend otherwise. The nearest reusable pieces are the resistance and hydrostatics workflow above and the general equal-budget comparison in [`09_equal_budget_pinn_fno_deeponet`](https://github.com/PINNeAPPle-Labs/PINNeAPPle-Benchmark/tree/main/experiments/09_equal_budget_pinn_fno_deeponet), which is not a hull study. Citing one as a maritime benchmark would be the kind of overclaim Section 8 warns about.
+
+### Related repositories
+
+- [`PINNeAPPle`](https://github.com/PINNeAPPle-Labs/PINNeAPPle) — the library itself: PINNs, neural operators, solvers, geometry, validation.
+- [`PINNeAPPle-CFD`](https://github.com/PINNeAPPle-Labs/PINNeAPPle-CFD) — the end-to-end CFD workflow behind the resistance cases.
+
+---
+
+## 11. Contributing
+
+This document is curated, and corrections are the most valuable contribution it receives.
+
+1. Open an issue or a pull request with the specific addition, correction or removal.
+2. **Cite a real, checkable source** — a paper, an official repo, a vendor page. Anything not verifiable is marked as such rather than stated as fact.
+3. Keep entries factual and neutral; no marketing language for commercial products, including PINNeAPPle's own.
+4. When adding a dataset, tool or solver, say what it is, who maintains it and where it lives.
+5. Flag what has gone stale — funding rounds, acquisitions and renamed products move quickly in this field.
+
+The full conventions are in [CONTRIBUTING.md](../CONTRIBUTING.md). If you are adding something that has a runnable counterpart in the PINNeAPPle organisation, add a row to Section 10 as well so the claim stays checkable.
+
+---
+
+## 12. Sources
 
 **Academic surveys and landmark papers**
 - Weymouth & Yue, "Physics-Based Learning Models for Ship Hydrodynamics" — https://arxiv.org/abs/1401.3816
